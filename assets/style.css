@@ -8,7 +8,7 @@ body {
 
 .container {
 
-    margin: 50px 80px;
+    margin: 50px 60px;
 }
 
 .banner-area {
@@ -31,6 +31,7 @@ body {
 
 .banner-title {
     font-size: 55px;
+    text-transform: capitalize;
     font-family: 'Poppins', sans-serif;
 
 }
@@ -83,9 +84,14 @@ body {
     height: 312px;
     display: flex;
     flex-direction: column;
-
+    text-align: center;
     justify-content: center;
 
+}
+
+.single-list a {
+    text-decoration: none;
+    color: #161616;
 }
 
 .blog-lists .single-list {
@@ -121,9 +127,6 @@ body {
 
 }
 
-.blog-thumbnail {
-    /* margin-bottom: 20px; */
-}
 
 .blog-thumbnail img {
     width: 100%;
@@ -146,6 +149,8 @@ body {
 .blog-title {
     font-size: 18px;
     font-weight: 600;
+
+
 }
 
 .blog-footer {
@@ -155,6 +160,22 @@ body {
 
 .fa-clock {
     margin-right: 20px;
+}
+
+.view-button {
+    text-align: center;
+    display: none;
+}
+
+#view-btn {
+    width: 250px;
+    height: 64px;
+    font-size: 22px;
+    background-color: #DD0000;
+    color: white;
+    font-weight: 700;
+    border-style: none;
+    border-radius: 10px;
 }
 
 footer {
@@ -196,6 +217,7 @@ hr {
 
 .footer-list li {
     padding: 0 20px;
+    white-space: nowrap;
 
 }
 
@@ -213,6 +235,16 @@ hr {
 }
 
 /* Second-page-area */
+
+.swap-color .single-list:first-child {
+    color: #ffffff;
+    background-color: #DD0000;
+}
+
+.swap-color .single-list:last-child {
+    color: #161616;
+    background-color: #ffffff;
+}
 
 .sports {
     margin-left: 20px;
@@ -257,4 +289,181 @@ hr {
     margin: 0px;
     font-size: 16px;
     color: #4D4D4D;
+}
+
+@media screen and (max-width:577px) {
+    .banner-area {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-info {
+        width: 100%;
+        padding-left: 35px;
+        margin: 40px;
+    }
+
+    .banner-info p {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .banner-title {
+        font-size: 35px;
+        padding: 8px;
+
+    }
+
+    .banner-thumbnail {
+        width: 100%;
+
+    }
+
+    .banner-thumbnail img {
+        width: 90%;
+        margin-left: 25px;
+        padding-left: 25px;
+    }
+
+    .blog-area {
+        flex-direction: column;
+        margin: 70px 0;
+
+    }
+
+    .blog-lists {
+        height: auto;
+        width: 100%;
+        background-color: unset;
+        justify-content: space-evenly;
+        margin-bottom: 70px;
+
+
+    }
+
+    .blog-lists .single-list {
+        border: 2px solid #B9B9B9;
+        border-radius: 5px;
+
+
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    .view-button {
+        display: block;
+        margin-bottom: 75px;
+    }
+
+    hr {
+        width: 300px;
+    }
+
+    .footer-list {
+        flex-direction: column;
+        padding-left: 0;
+    }
+
+    .footer-list li {
+        margin-bottom: 20px;
+    }
+
+    .sports {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+
+}
+
+@media screen and (min-width:577px) and (max-width:900px) {
+    .banner-area {
+        width: 100%;
+        align-items: flex-end;
+    }
+
+    .banner-info {
+
+        padding: 25px 49px;
+    }
+
+    .banner-info p {
+        font-size: 16px;
+        margin-right: 20px;
+    }
+
+    .banner-title {
+        font-size: 35px;
+    }
+
+    .banner-thumbnail {
+        margin-right: 10px;
+    }
+
+    .banner-thumbnail img {
+        height: 450px;
+    }
+
+    .blog-area {
+        flex-direction: column;
+        margin: 70px 0;
+
+    }
+
+    .blog-menu {
+        justify-content: center;
+    }
+
+    .blog-lists {
+        height: auto;
+        width: 100%;
+        background-color: unset;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 10px;
+
+
+
+    }
+
+    .blog-lists .single-list {
+        width: 230px;
+        height: 64px;
+        padding: 0 20px;
+        padding-top: 18px;
+        border: 2px solid #B9B9B9;
+        margin-left: 5px;
+        margin-bottom: 30px;
+        border-radius: 5px;
+        justify-content: center;
+
+    }
+
+    .single-list:first-child {
+        margin-top: 30px;
+    }
+
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .view-button {
+        display: block;
+        margin-bottom: 75px;
+    }
+
+    hr {
+        width: 400px;
+    }
+
+    .footer-list li {
+        text-indent: -1.2em;
+    }
+
+    .sports {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
 }
